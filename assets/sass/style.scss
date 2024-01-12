@@ -1,0 +1,43 @@
+$font-marope: 'Manrope', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-roboto-mono: 'Roboto Mono', monospace;
+$color-primary: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%);
+$color-primary2: linear-gradient(90deg, #ff618c 0%, #ffaf70 100%);
+$color-neural: #8c9095;
+$color-expired: #737373;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-poppins;
+}
+
+header {
+    min-height: 100vh;
+
+    .navbar {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .navbar-brand {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        > img {
+            width: 50px;
+        }
+        > span {
+            font-family: $font-roboto-mono;
+            background: $color-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    #hero {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}

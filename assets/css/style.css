@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  min-height: 100vh;
+}
+header .navbar {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+header .navbar-brand {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+header .navbar-brand > img {
+  width: 50px;
+}
+header .navbar-brand > span {
+  font-family: "Roboto Mono", monospace;
+  background: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header #hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}/*# sourceMappingURL=style.css.map */
