@@ -3,6 +3,50 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: #212529;
+}
+
+.color-gradient-1 {
+  background: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-gradient-2 {
+  background: linear-gradient(90deg, #ff618c 0%, #ffaf70 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-expired-50 {
+  color: #737373;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #ff618c 0%, #ffaf70 100%) border-box;
+  border-radius: 1.75rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.btn-gradient:hover {
+  color: white;
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-gradient {
+  background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #ff618c 0%, #ffaf70 100%) border-box;
+  border-radius: 1.75rem;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn-outline-gradient:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -11,6 +55,26 @@ header {
 header .navbar {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+header .navbar button.btn-outline-gradient,
+header .navbar button.btn-gradient {
+  min-width: 9.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+header .navbar .nav-link.active {
+  background: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+header .navbar .nav-link:hover {
+  background: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 header .navbar-brand {
   display: flex;
@@ -30,4 +94,23 @@ header .navbar-brand > span {
 header #hero {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+header #hero h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+header #hero p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  max-width: 33.25rem;
+}
+header #hero button {
+  min-width: 9.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+header #hero .color-gradient-1 {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

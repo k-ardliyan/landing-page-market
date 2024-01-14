@@ -5,12 +5,57 @@ $color-primary: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%);
 $color-primary2: linear-gradient(90deg, #ff618c 0%, #ffaf70 100%);
 $color-neural: #8c9095;
 $color-expired: #737373;
+$color-expired-50: #808080;
+$color-neural-black-50: #212529;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-poppins;
+    color: $color-neural-black-50;
+}
+
+.color-gradient-1 {
+    background: $color-primary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-gradient-2 {
+    background: $color-primary2;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-expired-50 {
+    color: $color-expired;
+}
+
+.btn-gradient {
+    background: $color-primary2 border-box;
+    border-radius: 1.75rem;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    &:hover {
+        color: white;
+        transform: translateY(-0.25rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+}
+
+.btn-outline-gradient {
+    background: linear-gradient(white, white) padding-box,
+        $color-primary2 border-box;
+    border-radius: 1.75rem;
+    border: 1px solid transparent;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
 }
 
 header {
@@ -19,6 +64,27 @@ header {
     .navbar {
         padding-top: 2rem;
         padding-bottom: 2rem;
+
+        button.btn-outline-gradient,
+        button.btn-gradient {
+            min-width: 9.75rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .nav-link.active {
+            background: $color-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            background: $color-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
     }
 
     .navbar-brand {
@@ -39,5 +105,28 @@ header {
     #hero {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 2;
+            max-width: 33.25rem;
+        }
+
+        button {
+            min-width: 9.75rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .color-gradient-1 {
+            display: block;
+        }
     }
 }
