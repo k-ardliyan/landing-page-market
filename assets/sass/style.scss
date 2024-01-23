@@ -130,3 +130,106 @@ header {
         }
     }
 }
+
+section#benefits {
+    .benefits-left {
+        min-height: 110px;
+        width: auto;
+        flex: 1;
+        background-color: #808080;
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 1.5rem !important;
+            height: 1.5rem !important;
+        }
+
+        .carousel-control-next {
+            right: -50px !important;
+            .btn-gradient {
+                padding: 0.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+                border-radius: 100%;
+                opacity: 1 !important;
+                &:hover {
+                    transform: translateX(0.25rem);
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+                }
+                &:active {
+                    transform: scaleX(1.3) scaleY(1.3);
+                }
+            }
+        }
+
+        .carousel-control-prev {
+            left: -50px !important;
+            .btn-gradient {
+                padding: 0.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+                border-radius: 100%;
+                opacity: 1 !important;
+                &:hover {
+                    transform: translateX(-0.25rem);
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+                }
+                &:active {
+                    transform: scaleX(1.3) scaleY(1.3);
+                }
+            }
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            opacity: 1;
+        }
+
+        .disabled {
+            .btn-gradient {
+                background: $color-neural !important;
+                cursor: not-allowed;
+                &:hover {
+                    transform: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .benefits-right {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        h2 {
+            font-weight: 600;
+            font-size: 2rem;
+            color: $color-neural-black-50;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            li {
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                color: $color-expired-50;
+                line-height: 2;
+                margin-bottom: 1rem;
+                &:before {
+                    content: image-set('/assets/images/ic-check.png' 2x);
+                    margin-right: 1.5rem;
+                    display: inline-block;
+                    height: 24px !important;
+                }
+            }
+        }
+    }
+}
