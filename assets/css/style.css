@@ -49,6 +49,24 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
+.bg-gradient {
+  background: linear-gradient(90deg, #ff6eac 0%, #ffb47c 100%, #ffb47c 100%) border-box !important;
+  border-radius: 0.25rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #212529;
+  line-height: 1.6;
+}
+
+h3 {
+  font-weight: 600;
+  color: #212529;
+  line-height: 1.6;
+}
+
 header {
   min-height: 100vh;
 }
@@ -115,6 +133,9 @@ header #hero .color-gradient-1 {
   display: block;
 }
 
+section#benefits {
+  padding-top: 7rem;
+}
 section#benefits .benefits-left {
   min-height: 110px;
   width: auto;
@@ -178,17 +199,25 @@ section#benefits .benefits-left .disabled .btn-gradient:hover {
   transform: none;
   box-shadow: none;
 }
+section#benefits .benefits-left .carousel-item .card {
+  border: none;
+  border-radius: 0.25rem 0 0 0;
+  max-width: 360px;
+  min-height: 112px;
+}
+section#benefits .benefits-left .carousel-item .card .card-body {
+  padding: 0.75rem 1.25rem;
+}
+section#benefits .benefits-left .carousel-item h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
 section#benefits .benefits-right {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   padding-left: 3rem;
   padding-right: 3rem;
-}
-section#benefits .benefits-right h2 {
-  font-weight: 600;
-  font-size: 2rem;
-  color: #212529;
-  line-height: 1.6;
 }
 section#benefits .benefits-right ul {
   list-style: none;
@@ -207,4 +236,23 @@ section#benefits .benefits-right ul li:before {
   margin-right: 1.5rem;
   display: inline-block;
   height: 24px !important;
+}
+
+section#opportunities {
+  padding-top: 7rem;
+}
+section#opportunities p {
+  color: #808080;
+}
+section#opportunities .row p {
+  max-width: 33rem;
+}
+
+section#cta .row {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+footer {
+  padding-top: 7rem;
 }/*# sourceMappingURL=style.css.map */

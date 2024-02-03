@@ -58,6 +58,24 @@ $color-neural-black-50: #212529;
     }
 }
 
+.bg-gradient {
+    background: $color-primary border-box !important;
+    border-radius: 0.25rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: $color-neural-black-50;
+    line-height: 1.6;
+}
+
+h3 {
+    font-weight: 600;
+    color: $color-neural-black-50;
+    line-height: 1.6;
+}
+
 header {
     min-height: 100vh;
 
@@ -132,6 +150,7 @@ header {
 }
 
 section#benefits {
+    padding-top: 7rem;
     .benefits-left {
         min-height: 110px;
         width: auto;
@@ -201,18 +220,29 @@ section#benefits {
                 }
             }
         }
+
+        .carousel-item {
+            .card {
+                border: none;
+                border-radius: 0.25rem 0 0 0;
+                max-width: 360px;
+                min-height: 112px;
+                .card-body {
+                    padding: 0.75rem 1.25rem;
+                }
+            }
+            h3 {
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 1.8;
+            }
+        }
     }
     .benefits-right {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
         padding-left: 3rem;
         padding-right: 3rem;
-        h2 {
-            font-weight: 600;
-            font-size: 2rem;
-            color: $color-neural-black-50;
-            line-height: 1.6;
-        }
         ul {
             list-style: none;
             padding-left: 0;
@@ -232,4 +262,27 @@ section#benefits {
             }
         }
     }
+}
+
+section#opportunities {
+    padding-top: 7rem;
+
+    p {
+        color: $color-expired-50;
+    }
+
+    .row p {
+        max-width: 33rem;
+    }
+}
+
+section#cta {
+    .row {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
+
+footer {
+    padding-top: 7rem;
 }
