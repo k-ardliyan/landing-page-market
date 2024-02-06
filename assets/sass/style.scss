@@ -76,6 +76,17 @@ h3 {
     line-height: 1.6;
 }
 
+.disabled {
+    .btn-gradient {
+        background: $color-neural !important;
+        cursor: not-allowed;
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+
 header {
     min-height: 100vh;
 
@@ -210,17 +221,6 @@ section#benefits {
             opacity: 1;
         }
 
-        .disabled {
-            .btn-gradient {
-                background: $color-neural !important;
-                cursor: not-allowed;
-                &:hover {
-                    transform: none;
-                    box-shadow: none;
-                }
-            }
-        }
-
         .carousel-item {
             .card {
                 border: none;
@@ -276,7 +276,86 @@ section#opportunities {
     }
 }
 
+section#feedback {
+    .card {
+        border-radius: 2rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        .card-body {
+            padding: 1.75rem;
+            img {
+                width: 3.75rem;
+                height: 3.75rem;
+            }
+        }
+    }
+
+    .btn-gradient {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 3rem;
+        padding: 0;
+        padding-top: 0.5rem;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        position: relative !important;
+    }
+
+    @media (max-width: 767px) {
+        .carousel-inner .carousel-item > div {
+            display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item.active {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+        justify-content: space-around;
+        column-gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+        .carousel-inner .carousel-item-end.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(33%);
+        }
+
+        .carousel-inner .carousel-item-start.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-33%);
+        }
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start {
+        transform: translateX(0);
+    }
+
+    .carousel-indicators {
+        margin-bottom: -0.5rem;
+        [data-bs-target] {
+            width: 0.5rem;
+            height: 0.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            background: $color-primary2;
+        }
+    }
+}
+
 section#cta {
+    margin-top: 7rem;
     .row {
         padding-left: 7rem;
         padding-right: 7rem;

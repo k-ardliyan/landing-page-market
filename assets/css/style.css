@@ -67,6 +67,15 @@ h3 {
   line-height: 1.6;
 }
 
+.disabled .btn-gradient {
+  background: #8c9095 !important;
+  cursor: not-allowed;
+}
+.disabled .btn-gradient:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 header {
   min-height: 100vh;
 }
@@ -191,14 +200,6 @@ section#benefits .benefits-left .carousel-control-next,
 section#benefits .benefits-left .carousel-control-prev {
   opacity: 1;
 }
-section#benefits .benefits-left .disabled .btn-gradient {
-  background: #8c9095 !important;
-  cursor: not-allowed;
-}
-section#benefits .benefits-left .disabled .btn-gradient:hover {
-  transform: none;
-  box-shadow: none;
-}
 section#benefits .benefits-left .carousel-item .card {
   border: none;
   border-radius: 0.25rem 0 0 0;
@@ -248,6 +249,78 @@ section#opportunities .row p {
   max-width: 33rem;
 }
 
+section#feedback .card {
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+section#feedback .card .card-body {
+  padding: 1.75rem;
+}
+section#feedback .card .card-body img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+section#feedback .btn-gradient {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  padding: 0;
+  padding-top: 0.5rem;
+}
+section#feedback .carousel-control-next,
+section#feedback .carousel-control-prev {
+  position: relative !important;
+}
+@media (max-width: 767px) {
+  section#feedback .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  section#feedback .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+section#feedback .carousel-item-next,
+section#feedback .carousel-item-prev,
+section#feedback .carousel-item.active {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+section#feedback .carousel-inner .carousel-item.active,
+section#feedback .carousel-inner .carousel-item-next,
+section#feedback .carousel-inner .carousel-item-prev {
+  display: flex;
+  justify-content: space-around;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  section#feedback .carousel-inner .carousel-item-end.active,
+  section#feedback .carousel-inner .carousel-item-next {
+    transform: translateX(33%);
+  }
+  section#feedback .carousel-inner .carousel-item-start.active,
+  section#feedback .carousel-inner .carousel-item-prev {
+    transform: translateX(-33%);
+  }
+}
+section#feedback .carousel-inner .carousel-item-end,
+section#feedback .carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+section#feedback .carousel-indicators {
+  margin-bottom: -0.5rem;
+}
+section#feedback .carousel-indicators [data-bs-target] {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #ff618c 0%, #ffaf70 100%);
+}
+
+section#cta {
+  margin-top: 7rem;
+}
 section#cta .row {
   padding-left: 7rem;
   padding-right: 7rem;
